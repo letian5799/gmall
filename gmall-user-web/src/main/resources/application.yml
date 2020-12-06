@@ -1,0 +1,29 @@
+#服务端口
+server:
+  port: 8070
+  #dubbo的配置
+debug: true
+#dubbo消费者配置
+dubbo:
+  #消费者服务名
+  application:
+    name: user-web
+# 第一次调试时，启动报错：出现22222端口被占用，所以加上以下配置，后来发现没有错误了，所以注释了
+#    qosEnable: true
+#    qos-port: 33333
+#    qos-accept-foreign-ip: false
+  #dubbo服务注册配置（协议和注册地址）
+  registry:
+    protocol: zookeeper
+    address: 192.168.19.104:2181
+  #通讯协议
+  protocol:
+    name: dubbo
+  #扫描包
+  scan:
+    base-packages: com.atguigu.gmall.user
+  #消费者配置（超时时间和服务检查）
+  consumer:
+    timeout: 600000
+    #不检查服务是否存在
+    check: false

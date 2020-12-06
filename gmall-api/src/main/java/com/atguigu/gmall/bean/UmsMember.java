@@ -1,10 +1,13 @@
-package com.atguigu.gmall.user.beans;
+package com.atguigu.gmall.bean;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
+import java.util.Date;
 
-public class UmsMember {
+public class UmsMember implements Serializable{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
@@ -14,18 +17,18 @@ public class UmsMember {
     private String nickname;
     private String phone;
     private int status;
-    private String createTime;
+    private Date createTime;
     private String icon;
-    private String gender;
-    private String birthday;
+    private int gender;
+    private Date birthday;
     private String city;
     private String job;
     private String personalizedSignature;
-    private String sourceType;
-    private String integration;
-    private String growth;
-    private String luckeyCount;
-    private String historyIntegration;
+    private int sourceType;
+    private int integration;
+    private int growth;
+    private int luckeyCount;
+    private int historyIntegration;
 
     public String getId() {
         return id;
@@ -83,11 +86,11 @@ public class UmsMember {
         this.status = status;
     }
 
-    public String getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
@@ -99,19 +102,19 @@ public class UmsMember {
         this.icon = icon;
     }
 
-    public String getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(String birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
@@ -139,43 +142,48 @@ public class UmsMember {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public String getSourceType() {
+    public int getSourceType() {
         return sourceType;
     }
 
-    public void setSourceType(String sourceType) {
+    public void setSourceType(int sourceType) {
         this.sourceType = sourceType;
     }
 
-    public String getIntegration() {
+    public int getIntegration() {
         return integration;
     }
 
-    public void setIntegration(String integration) {
+    public void setIntegration(int integration) {
         this.integration = integration;
     }
 
-    public String getGrowth() {
+    public int getGrowth() {
         return growth;
     }
 
-    public void setGrowth(String growth) {
+    public void setGrowth(int growth) {
         this.growth = growth;
     }
 
-    public String getLuckeyCount() {
+    public int getLuckeyCount() {
         return luckeyCount;
     }
 
-    public void setLuckeyCount(String luckeyCount) {
+    public void setLuckeyCount(int luckeyCount) {
         this.luckeyCount = luckeyCount;
     }
 
-    public String getHistoryIntegration() {
+    public int getHistoryIntegration() {
         return historyIntegration;
     }
 
-    public void setHistoryIntegration(String historyIntegration) {
+    public void setHistoryIntegration(int historyIntegration) {
         this.historyIntegration = historyIntegration;
     }
+
+
+
+
+
 }
