@@ -1,4 +1,4 @@
-HELP.md
+#HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
@@ -16,13 +16,13 @@ target/
 ### IntelliJ IDEA ###
 .idea
 *.iws
-*.iml
-*.ipr
-mvnw
-*.cmd
-HELP.md
-.mvn
-.mvn/wrapper/**
+#*.iml
+#*.ipr
+#mvnw
+#*.cmd
+#HELP.md
+#.mvn
+#.mvn/wrapper/**
 
 
 ### NetBeans ###

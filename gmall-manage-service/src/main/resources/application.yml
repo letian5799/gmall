@@ -1,0 +1,31 @@
+#服务端口
+server:
+  port: 8081
+#jdbc
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/gmall_study?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#设置日志级别
+debug: true
+#服务方的dubbo配置
+dubbo:
+  application:
+    name: manage-service
+  registry:
+    protocol: zookeeper
+    address: 192.168.19.104:2181
+  protocol:
+    name: dubbo
+    # 服务提供方所暴露的端口号,多个服务提供方不能够重复
+    port: 20881
+  scan:
+    base-packages: com.atguigu.gmall.manage
