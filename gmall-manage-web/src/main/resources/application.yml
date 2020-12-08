@@ -15,11 +15,10 @@ dubbo:
   #dubbo服务注册配置（协议和注册地址）
   registry:
     protocol: zookeeper
-    address: 192.168.19.104:2181
+    address: 192.168.154.4:2181
   #通讯协议
   protocol:
     name: dubbo
-    port: 20882
   #扫描包
   scan:
     base-packages: com.atguigu.gmall.manage
