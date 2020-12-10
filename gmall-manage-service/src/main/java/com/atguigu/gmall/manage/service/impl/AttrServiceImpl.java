@@ -21,8 +21,7 @@ public class AttrServiceImpl implements AttrService {
     PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper;
     @Autowired
     PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
-    @Autowired
-    PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper;
+
     @Override
     public List<PmsBaseAttrInfo> attrInfoList(String catalog3Id) {
         // 根据三级类目id查询平台属性信息
@@ -97,6 +96,10 @@ public class AttrServiceImpl implements AttrService {
         return pmsBaseAttrValues;
     }
 
+    /**
+     * 查询平台的基本销售属性
+     * @return
+     */
     @Override
     public List<PmsBaseSaleAttr> baseSaleAttrList() {
         return pmsBaseSaleAttrMapper.selectAll();

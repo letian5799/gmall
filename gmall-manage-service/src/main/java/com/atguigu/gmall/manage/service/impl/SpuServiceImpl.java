@@ -45,6 +45,10 @@ public class SpuServiceImpl implements SpuService {
         return pmsProductInfos;
     }
 
+    /**
+     * 保存商品的spu信息
+     * @param pmsProductInfo
+     */
     @Override
     public void saveSpuInfo(PmsProductInfo pmsProductInfo) {
 

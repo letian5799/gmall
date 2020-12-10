@@ -29,7 +29,7 @@ public interface AttrService {
     List<PmsBaseAttrValue> getAttrValueList(String attrId);
 
     /**
-     * 获取平台基础属性
+     * 平台定义的基本的销售属性
      * @return
      */
     List<PmsBaseSaleAttr> baseSaleAttrList();
