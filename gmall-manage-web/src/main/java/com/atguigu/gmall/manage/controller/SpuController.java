@@ -44,7 +44,11 @@ public class SpuController {
         return pmsProductImages;
     }
 
-
+    /**
+     * 获取商品的销售属性
+     * @param spuId
+     * @return
+     */
     @RequestMapping("spuSaleAttrList")
     @ResponseBody
     public List<PmsProductSaleAttr> spuSaleAttrList(String spuId){
@@ -54,7 +58,11 @@ public class SpuController {
     }
 
 
-
+    /**
+     * 上传图片
+     * @param multipartFile
+     * @return
+     */
     @RequestMapping("fileUpload")
     @ResponseBody
     public String fileUpload(@RequestParam("file") MultipartFile multipartFile){
@@ -65,6 +73,11 @@ public class SpuController {
         return imgUrl;
     }
 
+    /**
+     * 添加商品的spu信息
+     * @param pmsProductInfo
+     * @return
+     */
     @RequestMapping("saveSpuInfo")
     @ResponseBody
     public String saveSpuInfo(@RequestBody PmsProductInfo pmsProductInfo){

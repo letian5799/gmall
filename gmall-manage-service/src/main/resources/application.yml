@@ -22,7 +22,7 @@ dubbo:
     name: manage-service
   registry:
     protocol: zookeeper
-    address: 192.168.154.4:2181
+    address: 192.168.19.104:2181
   protocol:
     name: dubbo
     # 服务提供方所暴露的端口号,多个服务提供方不能够重复

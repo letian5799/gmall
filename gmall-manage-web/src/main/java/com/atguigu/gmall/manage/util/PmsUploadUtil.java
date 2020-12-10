@@ -17,7 +17,7 @@ public class PmsUploadUtil {
 
     public static String uploadImage(MultipartFile multipartFile) {
 
-        String imgUrl =  "http://192.168.19.104";
+        String imgUrl =  "http://192.168.19.109";
 
         // 上传图片到服务器
         // 配置fdfs的全局链接地址
@@ -34,7 +34,6 @@ public class PmsUploadUtil {
         // 获得一个trackerServer的实例
         TrackerServer trackerServer = null;
         try {
-            trackerServer = null;
             trackerServer = trackerClient.getTrackerServer();
         } catch (IOException e) {
             e.printStackTrace();
@@ -52,7 +51,7 @@ public class PmsUploadUtil {
             System.out.println(originalFilename);
             int i = originalFilename.lastIndexOf(".");
             String extName = originalFilename.substring(i+1);
-
+            // 上传信息
             String[] uploadInfos = storageClient.upload_file(bytes, extName, null);
 
             for (String uploadInfo : uploadInfos) {
