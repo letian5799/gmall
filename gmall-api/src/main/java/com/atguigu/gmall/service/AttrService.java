@@ -2,6 +2,7 @@ package com.atguigu.gmall.service;
 
 import com.atguigu.gmall.bean.PmsBaseAttrInfo;
 import com.atguigu.gmall.bean.PmsBaseAttrValue;
+import com.atguigu.gmall.bean.PmsBaseSaleAttr;
 
 import java.util.List;
 
@@ -26,4 +27,10 @@ public interface AttrService {
      * @return
      */
     List<PmsBaseAttrValue> getAttrValueList(String attrId);
+
+    /**
+     * 平台定义的基本的销售属性
+     * @return
+     */
+    List<PmsBaseSaleAttr> baseSaleAttrList();
 }
