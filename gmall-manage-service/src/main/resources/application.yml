@@ -1,8 +1,9 @@
 #服务端口
 server:
   port: 8081
-#jdbc
+
 spring:
+  #jdbc
   datasource:
     username: root
     password: root

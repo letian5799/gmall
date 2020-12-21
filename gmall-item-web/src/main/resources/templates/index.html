@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    hello thymeleaf!
+    <br>
+    <!--th:text是纯文本取值-->
+    <p th:text="${text1}"></p>
+    <!-- th:text会对<和>进行转义，可以渲染html标签-->
+    <p th:utext="${text2}"></p>
+    <!-- 访问对象的两种写法-->
+    <div th:object="${member}">
+        <p th:text="'用户编号：' + ${member.id}"/>
+        <p th:text="'用户昵称：' + ${member.nickname}"/>
+        <!--三目运算-->
+        <p th:text="'用户性别：' + ${member.gender == 1 ? '男':'女'}"/>
+        <p th:text="'出生日期：' + ${member.birthday}"/>
+        <!--dates.format日期格式化-->
+        <p th:text="'出生日期：' + ${#dates.format(member.birthday,'yyyy-MM-dd')}"/>
+    </div>
+    <hr>
+    <div th:object="${member}">
+        <p th:text="'用户编号：' + *{id}"/>
+        <p th:text="'用户昵称：' + *{nickname}"/>
+        <p th:text="'用户性别：' + *{gender}"/>
+        <p th:text="'出生日期：' + *{birthday}"/>
+        <p th:text="'出生日期：' + *{#dates.format(birthday,'yyyy-MM-dd')}"/>
+    </div>
+    <hr>
+    <!--页面引入-->
+    <!--<div th:include="innerhtml"></div>-->
+    <!--引入页面片段-->
+    <div th:include="innerhtml::footer"></div>
+    <!--引入页面片段带参数-->
+    <div th:include="innerhtml::footer-param" th:with="text1=1"></div>
+    <!--th:with可以调用后台服务-->
+    <!--th:remove可以移除标签，可选值为（all,tag,body,all-but-first,none）-->
+</body>
+</html>

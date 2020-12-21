@@ -36,4 +36,6 @@ public interface SpuService {
      * @return
      */
     List<PmsProductImage> spuImageList(String spuId);
+
+    List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(String productId,String skuId);
 }

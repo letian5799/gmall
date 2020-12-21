@@ -11,4 +11,11 @@ public interface SkuService {
      * @param pmsSkuInfo
      */
     void saveSkuInfo(PmsSkuInfo pmsSkuInfo);
+
+    /**
+     * 商品详情-获取skuInfo
+     * @param skuId
+     * @return
+     */
+    PmsSkuInfo getSkuById(String skuId);
 }

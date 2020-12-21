@@ -25,3 +25,9 @@
 gmall-user-web 通讯端口：8070
 
 gmall-user-service 通讯端口：8080
+
+后台管理模块
+
+gmall-manage-web 通讯端口 8071
+
+gmall-manage-service 通讯端口 8081
